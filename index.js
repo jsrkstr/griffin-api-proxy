@@ -28,26 +28,26 @@
 
 console.log('Running Index...');
 
-var http = require('http'),
-    httpProxy = require('http-proxy');
-//
-// Create your proxy server and set the target in the options.
-//
-var proxy = httpProxy.createProxyServer({
-    secure: false,
-    target: 'https://dsp-api.nc.stage.bidmotion.com'
-});
+// var http = require('http'),
+//     httpProxy = require('http-proxy');
+// //
+// // Create your proxy server and set the target in the options.
+// //
+// var proxy = httpProxy.createProxyServer({
+//     secure: false,
+//     target: 'https://dsp-api.nc.stage.bidmotion.com'
+// });
 
-var port = process.env.PORT || 9002;
+// var port = process.env.PORT || 9002;
 
-proxy.listen(port, function () {
-  console.log('Proxy servery listening on port - ' + port);
-}); // See (†)
+// proxy.listen(port, function () {
+//   console.log('Proxy servery listening on port - ' + port);
+// }); // See (†)
 
-proxy.on('proxyRes', function (proxyRes, req, res) {
-    proxyRes.headers['access-control-allow-origin'] = '*';
-    // proxyRes.setHeader('X-Special-Proxy-Header', 'foobar');
-  // console.log('RAW Response from the target', JSON.stringify(proxyRes.headers, true, 2));
-});
+// proxy.on('proxyRes', function (proxyRes, req, res) {
+//     proxyRes.headers['access-control-allow-origin'] = '*';
+//     // proxyRes.setHeader('X-Special-Proxy-Header', 'foobar');
+//   // console.log('RAW Response from the target', JSON.stringify(proxyRes.headers, true, 2));
+// });
 
 
