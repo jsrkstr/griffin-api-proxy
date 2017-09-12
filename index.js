@@ -1,30 +1,11 @@
-// const express = require('express')
-// const app = express()
+var express = require('express');
+var app = express();
 
-// app.all('/graphql', function (req, res) {
-    
+app.set('port', (process.env.PORT || 5000));
 
-//     var http = require('http');
-
-//     var options = {
-//       host: 'example.com',
-//       port: 80,
-//       path: '/foo.html'
-//     };
-
-//     http.get(options, function(resp){
-//       resp.on('data', function(chunk){
-//         //do something with chunk
-//         res.send(chunk);
-//       });
-//     }).on("error", function(e){
-//       console.log("Got error: " + e.message);
-//     });
-// })
-
-// app.listen(3004, function () {
-//   console.log('Example app listening on port 3004!')
-// })
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
 
 console.log('Running Index...');
 
