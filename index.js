@@ -26,6 +26,8 @@
 //   console.log('Example app listening on port 3004!')
 // })
 
+console.log('Running Index...');
+
 var http = require('http'),
     httpProxy = require('http-proxy');
 //
