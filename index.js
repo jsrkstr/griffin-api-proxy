@@ -28,6 +28,10 @@
 
 console.log('Running Index...');
 
+setInterval(function(){ 
+    console.log('Running Index...');
+}, 10000);
+
 // var http = require('http'),
 //     httpProxy = require('http-proxy');
 // //
