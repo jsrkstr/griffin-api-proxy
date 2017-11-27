@@ -20,7 +20,7 @@ var http = require('http'),
 //
 var proxy = httpProxy.createProxyServer({
     secure: false,
-    target: 'https://dsp-api.oh.stage.bidmotion.com'
+    target: process.env.API_URL
 });
 
 var port = process.env.PORT || 9002;
